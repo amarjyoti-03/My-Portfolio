@@ -1,0 +1,131 @@
+/* Reset default styles and apply general styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header styling */
+  .header {
+    background: linear-gradient(to right, white, pink, violet);
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  /* Header h1 styling */
+  .header h1 {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 800;
+  }
+  
+
+
+  /* Content section styling */
+  .content {
+    margin: 20px;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .fill-text p{
+    font-size: 55px;
+    font-weight: 700;
+  }
+  .navbar {
+    background-color: #222;
+    overflow: hidden;
+  }
+  
+  /* Navigation links styling */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Navigation link hover effect */
+  .navbar a:hover {
+    color: pink;
+  }   
+  /* Photo styling with flip animation */
+  .photo {
+    position: absolute; /* Position the photo */
+    top: 15%; /* Distance from top */
+    right: 2%; /* Distance from right */
+    width: 15%; /* Width of the photo */
+    height: auto; /* Automatically calculate height */
+    transform: rotateY(0); /* Initial rotation */
+    transition: transform 0.3s; /* Transition effect */
+    width: 300px; /* Adjust the size as needed */
+  height: 300px;
+  border-radius: 50%;
+  border: 7px solid #ffffff; /* Adjust border width as needed */
+  overflow: hidden;
+  }
+  /* This rule adds a glowing effect to the photo container using box-shadow.
+   The shadow is semi-transparent blue to give a glow effect.
+   Adjust the color, blur radius, and spread radius as desired. */
+.photo {
+  box-shadow: 0 0 20px 4px rgba(0, 0, 255, 0.5);
+}
+/* This keyframes animation gradually increases the intensity of the glowing border.
+   It creates an alternating glow effect by transitioning between two shadow states. */
+   @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px 4px rgba(0, 0, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 30px 8px rgba(0, 0, 255, 0.9);
+    }
+  }
+  
+  /* Apply the "glow" animation to the photo container.
+     It runs infinitely, alternating between the initial and intense glow states. */
+  .photo {
+    animation: glow 2s infinite alternate;
+  }
+  
+  
+  /* Photo hover effect */
+  .photo:hover {
+    transform: rotateY(180deg); /* Rotate on hover */
+  }
+
+  
+  /* Footer styling */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  /* Animation for the paragraph */
+  .fill-text {
+    font-size: 30px;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(to right, #00ff00, #00ff00) no-repeat;
+    background-size: 0 100%;
+    -webkit-background-clip: text;
+    animation: fillAnimation 4s linear infinite; /* Apply the animation */
+  }
+  
+  /* Keyframes for the animation */
+  @keyframes fillAnimation {
+    0% {
+      background-size: 0 100%; /* Initial background size */
+    }
+    100% {
+      background-size: 100% 100%; /* Full background size */
+    }
+    }
+  
